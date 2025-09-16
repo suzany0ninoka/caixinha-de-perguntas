@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(206, 138, 223);
+    background-color: url('img/bg-desktop.webp')
     color: rgb(160, 71, 211);
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -34,12 +34,12 @@ footer p {
 
 .cartão_conteudo {
     text-align: center;
-    background-color: rgb(104, 0, 136);
+    background-color: rgb(197, 41, 245);
     height: 100%;
 }
 
 .cartão_conteudo h3 {
-    background-color: rgb(73, 26, 126);
+    background-color: rgb(195, 147, 250);
     text-align: left;
     padding: 0.5rem;
 }
