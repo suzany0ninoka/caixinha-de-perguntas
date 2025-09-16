@@ -1,4 +1,24 @@
 body {
+    background-color: url('img/bg-desktop.webp') color: rgb(160, 71, 211);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer {
+    background-color: rgb(229, 72, 243);
+    color: rgb(228, 193, 241);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    font: 0.6rem;
+    margin-top: 0.5rem;
+}
+body {
     background-color: url('img/bg-desktop.webp')
     color: rgb(160, 71, 211);
     font-family: "Libre Baskerville", serif;
@@ -20,6 +40,33 @@ footer p {
     margin-top: 0.5rem;
 }
 
+#container {
+    display: flex;
+}
+
+.cartão {
+    margin: 1rem 1rem;
+    background-color: rgb(227, 186, 255);
+    height: 20rem;
+    flex-grow: 1;
+    flex-basis: calc(33% - 6rem);
+}
+
+.cartão_conteudo {
+    text-align: center;
+    background-color: rgb(197, 41, 245);
+    height: 100%;
+}
+
+.cartão_conteudo h3 {
+    background-color: rgb(195, 147, 250);
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.cartao_conteudo_resposta {
+    text-align: center;
+}
 #container {
     display: flex;
 }
