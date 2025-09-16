@@ -1,15 +1,17 @@
 body {
-    background-color: skyblue;
-    font-family: "Caveat", cursive;
+    background-color: rgb(206, 138, 223);
+    color: rgb(160, 71, 211);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 footer {
-    background-color: rgba(40, 222, 247, 0.527);
-    color: darkgrey;
+    background-color: rgb(229, 72, 243);
+    color: rgb(228, 193, 241);
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2rem;
 }
 
 footer p {
@@ -22,25 +24,26 @@ footer p {
     display: flex;
 }
 
-.cartão- {
+.cartão {
     margin: 1rem 1rem;
-    background-color: rgba(159, 201, 240, 0.74);
+    background-color: rgb(227, 186, 255);
     height: 20rem;
     flex-grow: 1;
-    flex-basis: calc(33%- 6rem);
+    flex-basis: calc(33% - 6rem);
 }
 
 .cartão_conteudo {
     text-align: center;
-    background-color: rgb(117, 200, 238);
+    background-color: rgb(104, 0, 136);
     height: 100%;
 }
 
 .cartão_conteudo h3 {
-    background-color: rgba(176, 179, 248, 0.877);
-    color: rgba(255, 255, 255, 0.623);
+    background-color: rgb(73, 26, 126);
     text-align: left;
     padding: 0.5rem;
-    margin: 0.6rem;
-    font-size: 1vw;
+}
+
+.cartao_conteudo_resposta {
+    text-align: center;
 }
