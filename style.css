@@ -6,7 +6,7 @@ body {
 }
 
 footer {
-    background-color: rgb(229, 72, 243);
+    background-color: rgb(210, 125, 236);
     color: rgb(228, 193, 241);
     position: fixed;
     bottom: 0;
@@ -33,7 +33,7 @@ footer p {
 
 .cartão_conteudo {
     text-align: center;
-    background-color: rgb(197, 41, 245);
+    background-color: rgb(186, 147, 197);
     height: 100%;
 }
 
