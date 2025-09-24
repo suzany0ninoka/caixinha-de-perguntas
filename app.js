@@ -1,3 +1,4 @@
 function CriarCartão(categoria, pergunta, resposta) {
-    console.log(categoria, pergunta, resposta);
+    let container = document.getElementById('container')
+
 }
