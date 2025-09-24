@@ -21,6 +21,9 @@ footer p {
 
 #container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between padding: 4rem;
+    gap: 3rem;
 }
 
 .cartão {
@@ -33,20 +36,22 @@ footer p {
 
 .cartão_conteudo {
     text-align: center;
-    background-color: rgb(186, 147, 197);
+    background-color: var(--card-back-color);
     height: 100%;
 }
 
 .cartão_conteudo h3 {
-    background-color: rgb(195, 147, 250);
-    text-align: left;
+    background-color: (--card-back-color);
+    color: 1px solid var(--text) text-align: left;
     padding: 0.5rem;
+    posiction: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 5w;
 }
 
-.cartao_conteudo_resposta {
-    text-align: center;
-}
+:root{
+--text-color:va
 
-#container {
-    display: flex;
+
 }
