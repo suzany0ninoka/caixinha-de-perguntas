@@ -1,3 +1,3 @@
-function CriarCartão(categoria,pergunta,resposta){
-    console.log(categoria,pergunta,resposta);
+function CriarCartão(categoria, pergunta, resposta) {
+    console.log(categoria, pergunta, resposta);
 }
