@@ -2,7 +2,9 @@ function CriarCartão(categoria, pergunta, resposta) {
     let container = document.getElementById('container')
     let cartao = document.createElement('artictle')
     let respostaEstaVisivel = false
-    container.appendChild(cartao)
+    function viraCartao() {
+        respostaEstaVisivel = !respostaEstaVisivel
+    }
     let respostaEstaVisivel = true
     cartao.className = 'cartao'
     cartao.innerHTML = `
@@ -18,6 +20,6 @@ function CriarCartão(categoria, pergunta, resposta) {
 `
 
 
+    container.appendChild(cartao)
 
-    respostaEstaVisivel = !respostaEstaVisivel
 }
