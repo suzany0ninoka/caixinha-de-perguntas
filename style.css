@@ -30,7 +30,7 @@ footer p {
     margin: 1rem 1rem;
     background-color: rgb(227, 186, 255);
     height: 20rem;
-    flex-grow: 1;
+    flex-grow: 1 0 calc(100% -rem)
     flex-basis: calc(33% - 6rem);
 }
 
@@ -51,40 +51,41 @@ footer p {
 }
 
 :root {
---text-color: #000000;
---card-front-color: #9180f1;
---card-back-color: #cd62ff;
+    --text-color: #000000;
+    --card-front-color: #9180f1;
+    --card-back-color: #cd62ff;
 }
 
 .cartao_conteudo_pergunta p {
-color: var(--text-color);
-font-weight: 700;
+    color: var(--text-color);
+    font-weight: 700;
 
 }
 
 .cartao_conteudo_resposta p {
-color: var(--card-back-color);
-font-weight: 500;
+    color: var(--card-back-color);
+    font-weight: 500;
 
 }
 
 .cartao:hover .cartao_conteudo {
-transform: rotateY (180deg);
+    transform: rotateY (180deg);
 }
 
-.cartao_conteudo_pergunta, .cartao_conteudo_resposta {
-backface-visibility: hidden;
-position: absolute;
-height: 100%;
-width: 100%;
+.cartao_conteudo_pergunta,
+.cartao_conteudo_resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .cartao_conteudo_resposta {
-transform: rotateY (180deg);
+    transform: rotateY (180deg);
 }
 
 .cartao_conteudo p {
-margin: 1rem;
-padding: 2rem;
-margin-top: 4rem;
+    margin: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
 }
