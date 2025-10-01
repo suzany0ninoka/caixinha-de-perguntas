@@ -50,8 +50,41 @@ footer p {
     font-size: 5w;
 }
 
-:root{
---text-color:va
+:root {
+--text-color: #000000;
+--card-front-color: #9180f1;
+--card-back-color: #cd62ff;
+}
 
+.cartao_conteudo_pergunta p {
+color: var(--text-color);
+font-weight: 700;
 
+}
+
+.cartao_conteudo_resposta p {
+color: var(--card-back-color);
+font-weight: 500;
+
+}
+
+.cartao:hover .cartao_conteudo {
+transform: rotateY (180deg);
+}
+
+.cartao_conteudo_pergunta, .cartao_conteudo_resposta {
+backface-visibility: hidden;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+
+.cartao_conteudo_resposta {
+transform: rotateY (180deg);
+}
+
+.cartao_conteudo p {
+margin: 1rem;
+padding: 2rem;
+margin-top: 4rem;
 }
