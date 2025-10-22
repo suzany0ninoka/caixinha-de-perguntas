@@ -1,4 +1,4 @@
-function CriarCartão(categoria, pergunta, resposta) {
+function CriarCartão(categoria,pergunta,resposta) {
     let container = document.getElementById('container')
     let cartao = document.createElement('artictle')
     cartao.className = 'cartao'
@@ -24,5 +24,5 @@ function CriarCartão(categoria, pergunta, resposta) {
     }
     cartao.addEventListener('click', viraCartao)
 
-    let respostaEstaVisivel = true
+
 }
