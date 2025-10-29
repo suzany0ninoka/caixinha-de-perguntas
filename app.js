@@ -1,6 +1,6 @@
 function CriarCartão(categoria,pergunta,resposta) {
     let container = document.getElementById('container')
-    let cartao = document.createElement('artictle')
+    let cartao = document.createElement('article')
     cartao.className = 'cartao'
 
     cartao.innerHTML = `
@@ -23,6 +23,5 @@ function CriarCartão(categoria,pergunta,resposta) {
         cartao.classList.toggle('ative', respostaEstaVisivel)
     }
     cartao.addEventListener('click', viraCartao)
-
 
 }

@@ -68,7 +68,7 @@ footer p {
 
     .cartao_conteudo_resposta p {
         color: var(--card-back-color);
-        font-weight: 700;
+        font-weight: 500;
         margin-top: 4rem;
         font-size: 3.8vw;
 
@@ -85,25 +85,27 @@ footer p {
         height: 100%;
         width: 100%;
         box-sizing: border-box;
-    }
+        text-align: center;
+        align-items: center;
 
     .cartao_conteudo_resposta {
         transform: rotateY (180deg);
         background-color: #9180f1;
         border: 4px solid var(--card-back-color);
+        text-align: center;
     }
 
     .cartao_conteudo p {
         margin: 1rem;
         padding: 2rem;
         margin-top: 4rem;
-        font-size: 3.8rem;
         margin-top: 4rem;
-        font-size: 3.8rem;
+        font-size: 2.8rem;
     }
 
     @media (max-width: 500px) {
         body {
             background-color: url('img/bg-mobile.webp');
         }
+        
     }
