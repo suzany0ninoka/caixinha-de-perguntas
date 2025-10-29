@@ -91,7 +91,7 @@ footer p {
     box-sizing: border-box;
     text-align: center;
     align-items: center;
-
+}
     .cartao_conteudo_resposta {
         transform: rotateY (180deg);
         background-color: #9180f1;
