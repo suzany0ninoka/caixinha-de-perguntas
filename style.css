@@ -1,115 +1,142 @@
+/* Estilos principais */
 body {
     background-color: #9180f1;
     font-family: "Libre Baskerville", serif;
-
+    margin: 0;
+    padding: 0;
 }
 
 footer {
-    background-color: rgb(210, 125, 236);
+    background-color: rgb(76, 15, 95);
     color: rgb(228, 193, 241);
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2rem;
+    height: 3rem; /* Ajustei para dar mais espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
-    text-align: center;
-    font: 0.6rem;
-    margin-top: 0.5rem;
+    font-size: 1rem; /* Aumentei o tamanho da fonte para facilitar a leitura */
+    margin: 0;
 }
 
+/* Container para os cartões */
 #container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 4rem;
-    gap: 3rem;
+    justify-content: space-around; /* Troquei para 'space-around' para espaçar melhor os cartões */
+    padding: 2rem;
+    gap: 2rem;
 }
 
-.cartão {
-    margin: 1rem 1rem;
-    background-color: rgb(227, 186, 255);
+/* Cartão Principal */
+.cartao {
+    width: calc(33.333% - 2rem); /* Ajustei o width para ser mais flexível */
     height: 20rem;
-    flex-grow: 1 0 calc(100% - rem);
-    flex-basis: calc(33% - 6rem);
+    background: transparent;
+    position: relative;
+    perspective: 900px;
 }
 
-.cartão_conteudo {
-    text-align: center;
-    background-color: #b5abe9;
+/* Conteúdo do Cartão */
+.cartao_conteudo {
+    width: 100%;
     height: 100%;
+    background-color: #1e1257;
+    position: relative;
     transform-style: preserve-3d;
-    transition: transform 300ms ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
-.cartão_conteudo h3 {
+/* Efeito de virar no hover */
+.cartao:hover .cartao_conteudo {
+    transform: rotateY(180deg);
+}
+
+/* Conteúdo da frente e do verso */
+.cartao_conteudo_pergunta,
+.cartao_conteudo_resposta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Frente do cartão */
+.cartao_conteudo_pergunta {
+    background: var(--card-front-color);
+    color: black;
+}
+
+/* Verso do cartão */
+.cartao_conteudo_resposta {
+    background: var(--card-back-color);
+    transform: rotateY(180deg);
+    color: white;
+    border: 4px solid #fff;
+}
+
+/* Tamanho dos textos */
+.cartao_conteudo_pergunta p,
+.cartao_conteudo_resposta p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Título do cartão */
+.cartao_conteudo h3 {
     color: #ac4feb;
     border: 1px solid var(--text-color);
     padding: 0.5rem;
-    position: absolut;
-    margin: 0.6rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     border-radius: 0.6rem;
-    font-size: 3vw;
+    font-size: 1.4rem;
     backface-visibility: hidden;
 }
 
+/* Cores padrão */
 :root {
     --text-color: #000000;
-    --card-front-color: #9180f1;
+    --card-front-color: #180d53;
     --card-back-color: #cd62ff;
 }
 
-.cartao_conteudo_pergunta p {
-    color: var(--text-color);
-    font-weight: 500;
-    text-align: center;
-    align-items: center;
-
-}
-
-.cartao_conteudo_resposta p {
-    color: var(--card-back-color);
-    font-weight: 700;
-    margin-top: 4rem;
-    font-size: 2.8vw;
-    text-align: center;
-    align-items: center;
-
-}
-
-.cartao:hover .cartao_conteudo {
-    transform: rotateY (180deg);
-}
-
-.cartao_conteudo_pergunta,
-.cartao_conteudo_resposta {
-    backface-visibility: hidden;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-}
-    .cartao_conteudo_resposta {
-        transform: rotateY (180deg);
-        background-color: #9180f1;
-        border: 4px solid var(--card-back-color);
-        text-align: center;
+/* Responsivo - Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: center; /* Alinha os cartões no centro */
     }
 
-    .cartao_conteudo p {
-        margin: 1rem;
-        padding: 2rem;
-        margin-top: 4rem;
-        margin-top: 4rem;
-        font-size: 2.8rem;
+    .cartao {
+        width: 80%; /* Reduz a largura dos cartões em telas menores */
+        height: 18rem;
     }
 
-    @media (max-width: 500px) {
-        body {
-            background-color: url('img/bg-mobile.webp');
-        }
-
+    footer {
+        height: 4rem; /* Ajustei o tamanho do footer */
     }
+
+    footer p {
+        font-size: 1.2rem; /* Aumentei um pouco o texto no footer */
+    }
+}
+
+@media (max-width: 500px) {
+    .cartao {
+        width: 90%; /* Ajuste para telas muito pequenas */
+    }
+}
